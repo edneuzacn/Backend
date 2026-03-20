@@ -7,11 +7,7 @@ app.get("/", (request, response)=> {
 
 app.use(express.json())
 
-app.post("/users", (req, res) =>{
-console.log(req.body)
-
- res.send("Testando")
-})
+app.post("/users",userController.createUsers)
 
 app.get("/users", userController.getAllUsers)
 

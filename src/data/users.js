@@ -1,7 +1,7 @@
     const users =[
         {
          "id" : 1,
-         "name" : "João",
+         "nome" : "João",
         "idade" : 25
      }
     ]
