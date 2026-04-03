@@ -1,0 +1,224 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1764769685260
+  modified: 1764769685260
+  description: ""
+collection:
+  - url: localhost:3000
+    name: testa api
+    meta:
+      id: req_8d497d8a5f454040a296bc73859f6d00
+      created: 1773959361959
+      modified: 1773959738922
+      isPrivate: false
+      description: ""
+      sortKey: -1773959361959
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000
+    name: Testando
+    meta:
+      id: req_7b905cf88e6f4199bed23437de2bc2da
+      created: 1773959393149
+      modified: 1773959458715
+      isPrivate: false
+      description: ""
+      sortKey: -1773959393149
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/users
+    name: lista usuários
+    meta:
+      id: req_71aedb2f3aaf4c16ad057259a65f89d4
+      created: 1773960291080
+      modified: 1775177706623
+      isPrivate: false
+      description: ""
+      sortKey: -1773960291080
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/users
+    name: lista users
+    meta:
+      id: req_b00cc634f9f34c45823c0204be793401
+      created: 1773960315145
+      modified: 1775177676277
+      isPrivate: false
+      description: ""
+      sortKey: -1773960315145
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/users
+    name: cadastra usuário
+    meta:
+      id: req_71b44580dc3b416b9c2a64cae847b881
+      created: 1773960387235
+      modified: 1774564599194
+      isPrivate: false
+      description: ""
+      sortKey: -1773960387235
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name" : "Maria",
+        	"age" : 21
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/users/1
+    name: busca usuário por id
+    meta:
+      id: req_11819aa4908443adacc1ff3fd1087679
+      created: 1774570479018
+      modified: 1775176667761
+      isPrivate: false
+      description: ""
+      sortKey: -1774570479018
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/users/1
+    name: atualiza usuário
+    meta:
+      id: req_ace87038951d4f65a339b2cd84ff7408
+      created: 1775172288123
+      modified: 1775176722495
+      isPrivate: false
+      description: ""
+      sortKey: -1774265433126.5
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name" : "Maria",
+        	"age" : 28
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3000/users/1
+    name: Remove usuário
+    meta:
+      id: req_2bd4ee54e6c54450ae52ad1487daf224
+      created: 1775177634089
+      modified: 1775177640683
+      isPrivate: false
+      description: ""
+      sortKey: -1774417956072.25
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.1.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1775169864423
+    modified: 1775169864423
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1775169864419
+    modified: 1775169864419
+    isPrivate: false

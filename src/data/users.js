@@ -1,9 +1,9 @@
-    const users =[
-        {
-         "id" : 1,
-         "nome" : "João",
-        "idade" : 25
-     }
-    ]
+const users = [
+    {
+        "id" : 1,
+        "name" : "Joao",
+        "age" : 25
+    },
+]
 
-    module.exports = users
+module.exports = users

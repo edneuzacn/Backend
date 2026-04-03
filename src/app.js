@@ -1,14 +1,12 @@
-const express = require('express')
-const userController= require("./controllers/userController")
+const express = require("express")
 const app = express()
-app.get("/", (request, response)=> {
-    response.send("Provérbios 16:3 - Consagre ao Senhor tudo o que você faz e os seus planos serão bem sucedidos-")
+
+const userRoutes = requerie("./routes/userRoutes")
+
+app.get("/", (request, response) => {
+    response.send("VAI CORINTHIANS!!!")
 })
-
 app.use(express.json())
-
-app.post("/users",userController.createUsers)
-
-app.get("/users", userController.getAllUsers)
+app.use("/", userRoutes)
 
 module.exports = app

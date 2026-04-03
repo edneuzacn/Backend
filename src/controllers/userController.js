@@ -1,28 +1,92 @@
- const userModel= require("../module/userModel")
+const userModel = require("../models/userModel")
 
- const getAllUsers=(req, res)=> {
+const getAllUsers = (req, res) => {
+    const users = userModel.findAll()
 
-    const users= userModel.findAll()
-    return res.send(users)
-       
- }
- const createUsers =(req, res) =>{
+    return res.json(users)
+}
 
-    const nome = req.body.nome
-    const idade= req.body.idade
+const createUser = (req, res) => {
+    // const {
+    //     name,
+    //     age
+    // } = req.body
+    
+    const name = req.body.name
+    const age = req.body.age
 
-    const newUser= {
-        id: Date.now(),
-        nome: nome,
-        idade: idade
+    // const newUser = {
+    //     name,
+    //     age
+    // }
+
+    const newUser = {
+        id : Date.now(),
+        name : name,
+        age : age
     }
+
     const createdUser = userModel.create(newUser)
     
-
     res.status(201).json(createdUser)
 }
- module.exports = {
-    getAllUsers,
-    createUsers
+
+const getUserById = (req, res) => {
+    const id = req.params.id
+
+    const user = userModel.findById(id)
+
+    if ( !user ) {
+        return res.status(404).json({
+            message: "Usuário não encontrado."
+        })
+    }
+
+    return res.json(user)
 }
- 
+
+const updateUser =(req, res) => {
+    const { id } = req.params
+
+    const{
+        name,
+        age
+    } = req.body
+
+    const userToUpdate ={
+        id: id,
+        name: name,
+        age: age
+    }
+    const updateUser= userModel.update(id, userToUpdate)
+
+     if ( !updateUser ) {
+        return res.status(404).json({
+            message: "Usuário não encontrado."
+        })
+    }
+
+    return res.json(updateUser)
+}
+
+const deleteUser = (req, res) => {
+    const  id = Number(req.params.id) 
+
+    const user = userModel.remove(id)
+
+      if ( !user ) {
+        return res.status(404).json({
+            message: "Usuário não encontrado."
+        })
+    }
+
+    return res.json(updateUser)
+}
+
+module.exports = {
+    getAllUsers,
+    createUser,
+    getUserById,
+    updateUser,
+    deleteUser
+}
